@@ -1,0 +1,33 @@
+<?php $_faqCollection=$this->getMyCollection(); ?>
+<div class="page-title">
+<?php if($categoryId = $this->getRequest()->getParam('category_id')): ?>
+<?php $categoryTitle = $this->getCatName($categoryId); ?>
+    <h1><?php echo $this->__('Frequently Asked Questions - ') ?><?php echo $this->htmlEscape($categoryTitle) ?></h1>
+<?php elseif ($this->getRequest()->getParam('mfaq')):?>
+    <h1><?php echo $this->__('Frequently Asked Questions') ?></h1>
+<?php else: ?>
+    <h1><?php echo $this->__('Frequently Asked Questions') ?></h1>
+<?php endif; ?>
+</div>
+<div class="add-faq" >
+<a href="<?php echo Mage::getUrl('faq') ?>index/addfaq">Add FAQ</a>
+</div>
+<?php echo $this->getChildHtml('faq_search_form') ?>
+<?php echo $this->getPagerHtml() ?>
+<?php if(!$_faqCollection->count()): ?>
+<p class="note-msg"><?php echo $this->__('There are no faq matching the selection.') ?></p>
+<?php else: ?>
+<div class="std">
+    <ul class="disc">
+    <?php foreach ($_faqCollection as $_faq): ?>
+        <li><a href="<?php echo "#".$this->htmlEscape($_faq->getTitle()) ?>"><?php echo $this->htmlEscape($_faq->getTitle()) ?></a></li>
+    <?php endforeach; ?>
+    </ul>
+    <dl class="generic-dl">
+    <?php foreach ($_faqCollection as $_faq): ?>
+        <dt id="<?php echo $this->htmlEscape($_faq->getTitle()) ?>"><?php echo $this->__('Q. ').$this->htmlEscape($_faq->getTitle()) ?></dt>
+        <dd><strong>A. </strong><?php echo $_faq->getDescription() ?></dd>
+    <?php endforeach; ?>
+    </dl>
+</div>
+<?php endif; ?>

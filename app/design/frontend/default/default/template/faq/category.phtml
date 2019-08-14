@@ -1,0 +1,35 @@
+<?php $_categories = $this->getCategoryCollection(); ?>
+<?php $_mfaqQuestions = $this->getmfaqCollection(); ?>
+<?php if($_categories->count()): ?>
+<div class="block">
+    <div class="block-title">
+        <strong><span><?php echo $this->__('Filter By Categories') ?></span></strong>
+    </div>
+    <div class="block-content">
+       <ul id="narrow-by-list">
+            <?php if($_mfaqQuestions->count()):?>
+           <li><a href="<?php echo $this->getUrl('faq',array('mfaq')) ?>"><?php echo $this->__('Frequently Asked Questions') ?></a></li>
+           <?php endif;?>
+           <?php foreach ($_categories as $_category): ?>
+            <li <?php if($this->isActiveCategory($_category)): ?>class="active"<?php endif;?>>
+                   <a href="<?php echo Mage::getUrl('faq', array('category_id' => $_category->getIdentifier())); ?>">
+                   <?php echo $this->__($_category->getName()) ?></a>
+            </li>
+            <?php endforeach; ?>
+       </ul>
+    </div>
+</div>
+<?php else:?>
+    <?php if($_mfaqQuestions->count()):?>
+    <div class="block">
+        <div class="block-title">
+            <strong><span><?php echo $this->__('Filter By Categories') ?></span></strong>
+        </div>
+        <div class="block-content">
+           <ul id="narrow-by-list">
+               <li><a href="<?php echo $this->getUrl('faq',array('mfaq')) ?>"><?php echo $this->__('Frequently Asked Questions') ?></a></li>               
+           </ul>
+        </div>
+    </div>
+    <?php endif;?>
+<?php endif;?>

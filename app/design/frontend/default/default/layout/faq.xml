@@ -1,0 +1,63 @@
+<?xml version="1.0"?>   
+<layout version="0.1.0">   
+  <default>
+  <reference name="root">
+    <reference name="top.links">
+            <action method="addLink" translate="label title" module="faq"><label>FAQs</label><url helper="faq/getFaqUrl"/><title>FAQs</title><prepare/><urlParams/><position>100</position></action>
+        </reference>
+    </reference>
+  </default>  
+  
+  <faq_index_index  translate="label">   
+   <reference name="head">
+      <action method="addItem"><type>skin_css</type><name>css/faq/faq.css</name><params/></action>
+	  <action method="addItem"><type>skin_css</type><name>css/faq/faq_responsive.css</name><params/></action>
+    </reference>
+     
+        
+    <reference name="root">   
+      <action method="setTemplate"><template>page/2columns-left.phtml</template></action>   
+      
+    </reference>   
+    <reference name="left">
+        <remove name="catalog.leftnav" />
+        <remove name="catalog.leftnav.filter" />
+        <remove name="sidenav" />
+        <remove name="left.catalog.compare.sidebar" />
+        <block type="faq/category" template="faq/category.phtml" />
+    </reference>
+    <reference name="content">   
+      <block type="faq/faq" template="faq/list.phtml" >
+      <block type="catalog/product_list_toolbar" name="product_list_toolbar" template="catalog/product/list/toolbar.phtml">
+                    <block type="page/html_pager" name="product_list_toolbar_pager" />
+                    
+                    </block>
+
+      </block>
+   </reference>   
+     
+  </faq_index_index> 
+  
+  <faq_index_addfaq>
+   <reference name="head">
+      <action method="addItem"><type>skin_css</type><name>css/faq/faq.css</name><params/></action>
+	  <action method="addItem"><type>skin_css</type><name>css/faq/faq_responsive.css</name><params/></action>
+    </reference>
+   <reference name="root">   
+      <action method="setTemplate"><template>page/2columns-left.phtml</template></action>   
+    </reference>
+    
+    <reference name="left">
+        <remove name="catalog.leftnav" />
+        <remove name="catalog.leftnav.filter" />
+        <remove name="sidenav" />
+        <remove name="left.catalog.compare.sidebar" />
+        <block type="faq/category" template="faq/category.phtml" />
+    </reference>
+    <reference name="content">
+        <block type="faq/faq" name="addfaq" template="faq/addfaq.phtml" />
+    </reference>
+  </faq_index_addfaq> 
+    
+</layout>   
+	

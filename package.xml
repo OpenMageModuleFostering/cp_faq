@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<package>
+    <name>CP_Faq</name>
+    <version>0.0.1</version>
+    <stability>stable</stability>
+    <license uri="http://opensource.org/licenses/osl-3.0.php">OSL v3.0</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Frequently Asked Questions</summary>
+    <description>FAQ Magento extension by Commerce Pundit will help you manage your FAQ. Set up your own beautiful and informative FAQ page easily without technical knowledge!.&lt;br /&gt;&#xD;
+&#xD;
+&lt;b&gt;Overview&lt;/b&gt;&lt;br/&gt;&#xD;
+Customer will always have many questions in mind before purchasing the products. Our FAQ extension allows admin and customer to add questions and answers and list them on front end with category. The listing is simple and like accordian style which don't take much space on front end. The extension also allows admin to approve question and give answer when some one will ask question. It would be a editor so that admin can provide style to answer of question. User will get notified when admin will give answer of his Question.&#xD;
+&#xD;
+&lt;br /&gt;&lt;br /&gt;&#xD;
+&lt;br /&gt;&#xD;
+&lt;b&gt;Features&lt;/b&gt;&#xD;
+&lt;ul&gt;&#xD;
+&lt;li&gt;Managing the FAQ's categories from admin.&lt;/li&gt;&#xD;
+&lt;li&gt;Managing the FAQ's items from admin.&lt;/li&gt;&#xD;
+&lt;li&gt;Admin Approve System for Faq&lt;/li&gt;&#xD;
+&lt;li&gt;Responsive&lt;/li&gt;&#xD;
+&lt;li&gt;Great experience using the wysiwyg editor for adding the FAQ items content.&lt;/li&gt;&#xD;
+&lt;li&gt;Easy Installation&lt;/li&gt;&#xD;
+&lt;/ul&gt;</description>
+    <notes>Frequently Asked Questions</notes>
+    <authors><author><name>Commerce Pundit</name><user>CPExtensions</user><email>magento@commercepundit.com</email></author></authors>
+    <date>2015-06-13</date>
+    <time>11:33:54</time>
+    <contents><target name="magecommunity"><dir name="CP"><dir name="Faq"><dir name="Block"><dir name="Adminhtml"><dir name="Category"><dir name="Edit"><file name="Form.php" hash="5a9cbd091785d45dcc99c1996b00ccbd"/><dir name="Tab"><file name="Form.php" hash="16d224c02ffb6a8a097b794551bb40af"/></dir><file name="Tabs.php" hash="519dc23ec98d1d59e4dc9b4f0cf0b2cc"/></dir><file name="Edit.php" hash="2049f3b05de6a4d263bc11c9e1d0b536"/><file name="Grid.php" hash="9ec91341ce78f6a525ff35347058d8f1"/></dir><file name="Category.php" hash="492bac33018c2b9d39a931395d7c00f9"/><dir name="Faq"><dir name="Edit"><file name="Form.php" hash="e8d880dbf495d2779f330b1acd4a6cb9"/><dir name="Tab"><file name="Form.php" hash="c7faa340109beb63d0d204001fd5014f"/></dir><file name="Tabs.php" hash="1b6261d8917cb01d39e2726a872f7d68"/></dir><file name="Edit.php" hash="ffb954ec7d237a81b815f48d64729556"/><file name="Grid.php" hash="b67c6c6ef85cd51dce2e7a37bf0ba2b6"/></dir><file name="Faq.php" hash="4ce4562ddb13650508dce56b95b6ddf7"/><dir name="Widget"><dir name="Grid"><dir name="Column"><dir name="Renderer"><file name="Category.php" hash="ac203386e526dd3e125f9de7e4d9dc6f"/></dir></dir></dir></dir></dir><file name="Category.php" hash="ef3dd8202081d2ab34ad9c2ae405af5c"/><file name="Faq.php" hash="69215d305441a4103b0fc0329a9ae5c9"/><file name="Toolbar.php" hash="d264e6e16496d0c02bbf2f6133f8b6a5"/></dir><dir name="Helper"><file name="Data.php" hash="951ac7e3bad00e6c43c17b3da4f11477"/></dir><dir name="Model"><file name="Category.php" hash="eff968834060e3d5a5f71f70a9b36920"/><file name="Faq.php" hash="d083fb86c6cc8b555e761f96517f4ac7"/><dir name="Mysql4"><dir name="Category"><file name="Collection.php" hash="6f48c9344d8682a5113465688d9747f0"/></dir><file name="Category.php" hash="1f233119fd0472ff7fa5606b4cf682c5"/><dir name="Faq"><file name="Collection.php" hash="f8404b2e484f57c3fc7ecf5ab3a0f27a"/></dir><file name="Faq.php" hash="9ad35cc2cdfd04a0e14f30de2a076754"/></dir><file name="Status.php" hash="217a3e6758f8bc342243bd414023184f"/></dir><dir name="controllers"><dir name="Adminhtml"><file name="CategoryController.php" hash="cdeece13a0e57057fd6934e00aa053d2"/><file name="FaqController.php" hash="f982eea571e9c1ae94832cf1842cc967"/></dir><file name="IndexController.php" hash="30a1b491b9adb983b719fc1196fba0b4"/></dir><dir name="etc"><file name="config.xml" hash="6eb1179c80d6d6334554df6230696503"/></dir><dir name="sql"><dir name="faq_setup"><file name="mysql4-install-0.1.0.php" hash="edd8743eae9495d7813b2ef0be9206c9"/></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="CP_Faq.xml" hash="253be0cb3b632dcf1e125b2da65b60c6"/></dir></target><target name="magelocale"><dir name="en_US"><dir name="template"><dir name="email"><file name="create_faq_by_customer.html" hash="50fdf6caf77d3a4aa9cbf68297a0ea1f"/><file name="admin_create_faq_by_customer.html" hash="d02fc3c7948d0c51e402817c8671fd9f"/><file name="reply_create_faq_by_customer.html" hash="d02fc3c7948d0c51e402817c8671fd9f"/></dir></dir></dir></target><target name="magedesign"><dir name="frontend"><dir name="default"><dir name="default"><dir name="layout"><file name="faq.xml" hash="8c48af58b406221286190d83b067d7e4"/></dir><dir name="template"><dir name="faq"><file name="addfaq.phtml" hash="2c04ec5f826af8c8f9e60e50b76e4fb7"/><file name="category.phtml" hash="f2cc34d6631eb31995b370e335a3ac15"/><file name="list.phtml" hash="427d981827e249808e60a85bd40f5703"/></dir></dir></dir></dir><dir name="rwd"><dir name="default"><dir name="layout"><file name="faq.xml" hash=""/></dir></dir></dir></dir><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="layout"><file name="faq.xml" hash="18182b75d1607927ad2fd13a0deba533"/></dir></dir></dir></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.2.0</min><max>6.0.0</max></php></required></dependencies>
+</package>

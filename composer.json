@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/CP_Faq",
+    "type": "magento-module",
+    "license": "OSL-v3.0",
+    "homepage": "",
+    "description": "Frequently Asked Questions",
+    "authors": [
+    {
+        "name": "Commerce Pundit",
+        "email": "magento@commercepundit.com"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}

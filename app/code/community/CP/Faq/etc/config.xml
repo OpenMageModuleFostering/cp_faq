@@ -1,0 +1,154 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <CP_Faq>
+      <version>0.1.0</version>
+    </CP_Faq>
+  </modules>
+  <frontend>
+    <routers>
+      <faq>
+        <use>standard</use>
+          <args>
+            <module>CP_Faq</module>
+            <frontName>faq</frontName>
+          </args>
+      </faq>
+    </routers>
+		<layout>
+		  <updates>
+			<faq>
+			  <file>faq.xml</file>
+			</faq>
+		  </updates>
+		</layout>
+  </frontend>
+  <global>
+  
+  <models>
+            <faq>
+                <class>CP_Faq_Model</class>
+                <resourceModel>faq_mysql4</resourceModel>
+            </faq>
+            <faq_mysql4>
+                <class>CP_Faq_Model_Mysql4</class>
+                <entities>
+                    <faq>
+                        <table>faq</table>
+                    </faq>
+                    <category>
+                        <table>faq_category</table>
+                    </category>
+                </entities>
+            </faq_mysql4>
+  </models>
+    <helpers>
+      <faq>
+        <class>CP_Faq_Helper</class>
+      </faq>
+    </helpers>
+	<blocks>
+	  <faq>
+		<class>CP_Faq_Block</class>
+	  </faq>
+      
+	</blocks>
+	<resources>
+	  <faq_setup>
+		<setup>
+		  <module>CP_Faq</module>
+		</setup>
+		<connection>
+		  <use>core_setup</use>
+		</connection>
+	  </faq_setup>
+	  <faq_write>
+		<connection>
+		  <use>core_write</use>
+		</connection>
+	  </faq_write>
+	  <faq_read>
+		<connection>
+		  <use>core_read</use>
+		</connection>
+	  </faq_read>
+	</resources>
+    <template>
+        <email>
+            <create_faq_by_customer_template module="faq">
+                <label>Create Faq by Customer</label>
+                <file>create_faq_by_customer.html</file>
+                <type>html</type>
+            </create_faq_by_customer_template>
+            <admin_create_faq_by_customer_template module="faq">
+                <label>Admin Create Faq by Customer</label>
+                <file>admin_create_faq_by_customer.html</file>
+                <type>html</type>
+            </admin_create_faq_by_customer_template>
+            <reply_create_faq_by_customer_template module="faq">
+                <label>Reply Create Faq by Customer</label>
+                <file>reply_create_faq_by_customer.html</file>
+                <type>html</type>
+            </reply_create_faq_by_customer_template>
+        </email>
+    </template>
+  </global>
+  <admin>
+	<routers>
+	  <admin_faq>
+	    <use>admin</use>
+		<args>
+		  <module>CP_Faq</module>
+		  <frontName>admin_faq</frontName>
+		</args>
+	  </admin_faq>
+	</routers>
+  </admin>
+  <adminhtml>
+	<menu>
+	  <faq module="faq">
+		<title>Faq</title>
+		<sort_order>100</sort_order>
+		<children>
+		  <faq module="faq">
+			<title>Frequently Asked Questions</title>
+			<sort_order>0</sort_order>
+			<action>admin_faq/adminhtml_faq</action>
+		  </faq>
+          <faq_category module="faq">
+            <title>FAQ Categories</title>
+            <sort_order>1</sort_order>
+            <action>admin_faq/adminhtml_category</action>
+          </faq_category>
+		</children>
+	  </faq>
+	</menu>
+	<acl>
+	  <resources>
+		<all>
+		  <title>Allow Everything</title>
+		</all>
+		<admin>
+		  <children>
+			<faq translate="title" module="faq">
+			  <title>Faq</title>
+			  <sort_order>1000</sort_order>
+			  <children>
+		  <faq translate="title">
+			<title>Frequently Asked Questions</title>
+		  </faq>
+			  </children>
+			</faq>
+		  </children>
+		</admin>
+	  </resources>
+	</acl>
+	<layout>
+	  <updates>
+		<faq>
+		  <file>faq.xml</file>
+		</faq>
+	  </updates>
+	</layout>
+  </adminhtml>
+</config> 
