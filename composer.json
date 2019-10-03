@@ -1,7 +1,7 @@
 {
-    "name": "OpenMageModuleFostering\/CP_Faq",
+    "name": "openmage-module-fostering\/cp_faq",
     "type": "magento-module",
-    "license": "OSL-v3.0",
+    "license": "OSL-3.0",
     "homepage": "",
     "description": "Frequently Asked Questions",
     "authors": [
